@@ -14,6 +14,7 @@ import com.ibm.mqlight.api.CompletionListener;
 import com.ibm.mqlight.api.DestinationAdapter;
 import com.ibm.mqlight.api.NonBlockingClient;
 import com.ibm.mqlight.api.Delivery;
+import com.ibm.mqlight.api.StringDelivery;
 
 public class AMQPConnectorFactory extends AbstractConnectorFactory {
 
@@ -37,15 +38,24 @@ public class AMQPConnectorFactory extends AbstractConnectorFactory {
 							
 							client = NonBlockingClient.create(serverAddress, null, null);
 							client.subscribe(topicName, new DestinationAdapter<Object>() {
-							  public void onMessage(NonBlockingClient client, Void context, Delivery delivery) {
-							    BytesDelivery bd = (BytesDelivery)delivery;
-							      
+							  public void onMessage(NonBlockingClient client, Object context, Delivery delivery) {
+								byte[] data=null;
+								switch (delivery.getType()) {
+							      case BYTES:
+							    	data = ((BytesDelivery)delivery).getData().array();							        
+							        break;
+							      case STRING:
+							    	data = ((StringDelivery)delivery).getData().getBytes();							        
+							        break;
+							    }
+								  
 							    //report metadata about the delivery
 							    Properties deliveryProperties = new Properties();							      
-							    deliveryProperties.putAll(bd.getProperties());							      
+							    deliveryProperties.putAll(delivery.getProperties());	
+							    deliveryProperties.put("data",data.toString());
 							      
 							    //ask the framework to process the data and metadata
-							    getCallback().processInboundData(bd.getData(),
+							    getCallback().processInboundData(data,
 							  		                           deliveryProperties);
 							      
 							      

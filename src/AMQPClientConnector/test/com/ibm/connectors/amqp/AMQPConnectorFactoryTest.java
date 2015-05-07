@@ -100,12 +100,26 @@ public class AMQPConnectorFactoryTest {
 		assert(info.equals("AMQP Client Connector"));
 	}	
 	
+	private void publishTestMessage(){
+		System.out.println("publish");
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	};
+	
 	@Test
 	public void testCreateInputConnector() throws ConnectorException {
 		InputConnector inputConnector = connectorFactory.createInputConnector("TestConector");
+		Properties props = new Properties();
+		props.setProperty("topic", "public");
+		props.setProperty("hostname", "localhost");
 		assertNotNull("createInputConnector returned null", inputConnector );
-		inputConnector.initialise("TestConnector", null, connectorCallback, connectorServices);
+		inputConnector.initialise("TestConnector", props, connectorCallback, connectorServices);
 		inputConnector.start();
+		publishTestMessage();
 		assertEquals("unexpected number of input data",1, connectorCallback.inputData.size());
 		
 		assertTrue("input data is not a byte array",
