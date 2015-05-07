@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Require-Bundle: com.ibm.etools.mft.api,com.ibm.etools.mft.util.ui,com.
+ ibm.etools.mft.config
+Bundle-Vendor: AMQPClientNodes Provider
+Bundle-Version: 1.0.0.qualifier
+Bundle-Name: AMQPClientNodes Plug-in
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: AMQPClientNodes; singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

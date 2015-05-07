@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="org.eclipse.help.contexts">
+        <contexts file="HelpContexts.xml"/>
+    </extension>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="com.ibm.etools.mft.api.nodes"/>
+</plugin>
