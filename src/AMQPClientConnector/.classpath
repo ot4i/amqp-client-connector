@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ConnectorAPI"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/John/git/qpid-proton/contrib/mqlight/java/lib/gson-2.2.4.jar"/>
 	<classpathentry kind="lib" path="C:/John/git/qpid-proton/contrib/mqlight/java/lib/logback-classic-1.1.2.jar"/>
@@ -11,6 +10,7 @@
 	<classpathentry kind="lib" path="C:/John/git/qpid-proton/contrib/mqlight/java/lib/netty-all-4.0.21.Final.jar"/>
 	<classpathentry kind="lib" path="C:/John/git/qpid-proton/contrib/mqlight/java/lib/slf4j-api-1.7.5.jar"/>
 	<classpathentry kind="lib" path="C:/John/git/qpid-proton/contrib/mqlight/java/lib/stateless4j-2.5.0.jar"/>
-	<classpathentry kind="lib" path="C:/John/Interconnect/2015/ot4i/background/MQLightClient/mqlight-api-1.0.2015021901-SNAPSHOT-all/mqlight-1.0.2015021901-SNAPSHOT/mqlight-api-1.0.2015021901-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.0/server/classes/cmnCon.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/.m2/repository/com/ibm/mqlight/api/mqlight-api/1.0.2015021901-SNAPSHOT/mqlight-api-1.0.2015021901-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

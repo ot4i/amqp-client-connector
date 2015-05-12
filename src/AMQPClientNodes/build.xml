@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="AMQPClientNodes">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Program Files/IBM/IIB/10.0.0.0/tools"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Plug-in Dependencies.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.api_10.0.0.v20150313-1900.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.uri_10.0.0.v20150313-1900.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.api.base_10.0.0.v20150313-1900.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui_3.104.3.v20130718-2235.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt_3.100.2.v20150224-1522.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.webedit.xulrunner.fragment_1.0.0.v20140922_1835.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt.win32.win32.x86_64_3.100.2.v20150224-1526.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jface_3.8.103.v20141022-1359.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.commands_3.6.2.v20130326-1259.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.workbench_3.104.3.v20140822-1440.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.e4.ui.workbench3_0.12.0.v20130326-1259.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.8.3.v20130125-0546.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.8.0.v20130125-0546.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.help_3.6.0.v20130326-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.expressions_3.4.401.v20130326-1301.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.8.0.v20130326-1301.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.8.2.v20140416-1442.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.cds_2.2.0.201203051532.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.6.100.v20130327-1501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.5.300.v20130326-1301.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.101.v20130326-1301/runtime_registry_compatibility.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.5.201.v20131009-2050.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.5.1.v20130327-1501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.4.200.v20130326-1301.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.3.100.v20130327-1501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.util.ui_10.0.0.v20150313-1900.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/IntegrationAPI.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/brokerutil.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/jackson-annotations-2.2.2.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/jackson-core-2.2.2.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/jackson-databind-2.2.2.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/jetty-io.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/jetty-util.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/websocket-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/websocket-client.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/websocket-common.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/MQTTPolicyBeans.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.ibm.etools.mft.config_10.0.0.v20150313-1900/MQPolicyBeans.jar"/>
+    </path>
+    <path id="AMQPClientNodes.classpath">
+        <path refid="Plug-in Dependencies.libraryclasspath"/>
+        <pathelement location="bin"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="AMQPClientNodes.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
