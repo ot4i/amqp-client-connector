@@ -23,10 +23,10 @@ git clone https://github.com/ot4i/amqp-client-connector.git
 ``
 
 ### Compile and test this project
-``
+```
 cd amqp-client-connector
 gradlew build
-``
+```
 
 
 #### NOTE 
