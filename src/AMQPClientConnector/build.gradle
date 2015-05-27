@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.ibm.mqlight.api', name: 'mqlight-api', version: '+'
+    compile group: 'com.ibm.mqlight', name: 'mqlight-project', version: '+'
     compile files("$System.env.MQSI_FILEPATH/classes/cmnCon.jar")
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
