@@ -1,5 +1,7 @@
 # amqp-client-connector
-AMQP and IBM MQ Light connector and nodes for IBM Integration Bus
+AMQP and IBM MQ Light connector and nodes for IBM Integration Bus.
+
+NOTE: IBM Integration Bus v 10.0.0.1 plus  APAR IT09058 are required to use this connector.
 
 ## Install pre-built binaries
 To install connector on IIB Server..
